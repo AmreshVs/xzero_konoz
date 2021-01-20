@@ -1,0 +1,25 @@
+$primary: #00a2ff;
+$white: #FFF;
+$light-bg: #f3f3f3;
+$black: #3a3a3a;
+$black-lite: #919191;
+$hover : #2592e7;
+
+$input-border-color: #EEE;
+$input-border-radius: .50rem !important;
+$btn-border-radius: .50rem !important;
+
+$enable-responsive-font-sizes: true;
+
+// Bootstrap Styles
+@import './boostrap.scss';
+
+// Common Styles
+@import './common.scss';
+
+// Components Styles
+@import '../components/card';
+
+// Pages Styles
+@import '../pages/login';
+

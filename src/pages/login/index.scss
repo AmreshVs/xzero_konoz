@@ -1,0 +1,26 @@
+.login{
+  .card{
+    padding: 20px;
+  }
+
+  .logo{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    margin-right: -5px;
+  }
+  
+  .form-control, .btn{
+    padding: 10px;
+  }
+
+  .btn{
+    font-weight: 700;
+  }
+
+  .input-icon{
+    .icon-input{
+      margin: 10px;
+    }
+  }
+}

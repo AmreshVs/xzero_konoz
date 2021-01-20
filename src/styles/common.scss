@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FAFAFA;
+}
+
+.layout{
+  background-color: $light-bg;
+  margin-top: 58.5px;
+  min-height: calc(100vh - 58.5px);
+}
+
+.loader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 58.5px);
+}
+
+.vhcenter{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.wh100{
+  height: 100vh;
+  width: 100%;
+}
+
+.title-1{
+  font-size: x-large;
+  font-weight: 700;
+  color: $black;
+}
+
+.title{
+  font-size: large;
+  font-weight: 700;
+  color: $black;
+}
+
+.caption{
+  font-size: medium;
+  color: $black-lite;
+}
+
+.form-group{
+  margin-bottom: 1rem;
+}
+
+.btn{
+  color: $white !important;
+}
+
+.shadow-sm-new {
+  box-shadow: 0 0.125rem 1.25rem rgba(58, 58, 58, 0.075) !important;
+}
+
+.input-icon{
+  position: relative;
+
+  input.form-control{
+    padding-left: 40px;
+  }
+}
+
+.icon-input{
+  position: absolute;
+  margin: 5px;
+  width: 25px;
+  fill: #BBB;
+}
+
+// Responsive
+@include media-breakpoint-down(xs){
+  .bg-primary .container{
+    padding: 0px;
+  }
+  .layout{
+    margin-top: 55px;
+  }
+  .min-padd-3{
+    padding: 3px !important;
+  }
+  .min-padd-10{
+    padding: 0px 10px !important;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .btn{
+    font-size: 14px;
+  }
+
+  h1{
+    font-size: 22px;
+  }
+
+  h3{
+    font-size: 17px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  h1{
+    font-size: 25px;
+  }
+
+  h3{
+    font-size: 17px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  h1{
+    font-size: 25px;
+  }
+}
