@@ -1,6 +1,7 @@
 $primary: #00a2ff;
 $white: #FFF;
 $light-bg: #f3f3f3;
+$lite-white: #f3f3f3;
 $black: #3a3a3a;
 $black-lite: #919191;
 $hover : #2592e7;
@@ -19,7 +20,10 @@ $enable-responsive-font-sizes: true;
 
 // Components Styles
 @import '../components/card';
+@import '../components/navbar';
 
 // Pages Styles
 @import '../pages/login';
+@import '../pages/home';
+@import '../pages/declareWinner';
 

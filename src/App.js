@@ -1,13 +1,16 @@
 import React from 'react';
 
-import LoginPage from 'pages/login';
+// import Home from 'pages/home';
+import DeclareWinner from 'pages/declareWinner';
+import Navbar from 'components/navbar';
 
 function App() {
   return (
     <>
-      {/* <div className="layout"> */}
-      <LoginPage />
-      {/* </div> */}
+      <Navbar />
+      <div className="layout">
+        <DeclareWinner />
+      </div>
     </>
   );
 }
