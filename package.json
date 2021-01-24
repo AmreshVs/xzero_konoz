@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.3.7",
     "@lottiefiles/react-lottie-player": "^3.0.0",
     "axios": "^0.19.2",
     "cra-template": "1.0.3",
     "framer-motion": "^3.2.2-rc.1",
+    "graphql": "^15.4.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-bootstrap-icons": "^1.0.3-alpha5",
@@ -15,7 +17,8 @@
     "react-image-magnify": "^2.7.4",
     "react-infinite-data": "^1.0.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-toastify": "^6.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

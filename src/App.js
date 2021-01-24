@@ -1,17 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
+import { ToastContainer } from 'react-toastify';
+import { BrowserRouter as Router } from "react-router-dom";
 
-// import Home from 'pages/home';
-import DeclareWinner from 'pages/declareWinner';
 import Navbar from 'components/navbar';
+import { BASE_URL } from 'constants/common';
+import Navigation from 'navigation';
+import { UserDataContext } from 'context';
 
-function App() {
+const httpLink = new HttpLink({
+  uri: `${BASE_URL}/api`
+});
+
+const defaultOptions = {
+  watchQuery: {
+    fetchPolicy: 'network-only',
+    errorPolicy: 'all',
+  },
+  query: {
+    fetchPolicy: 'network-only',
+    errorPolicy: 'all',
+  },
+  mutate: {
+    errorPolicy: 'all',
+  },
+};
+
+const client = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache(),
+  defaultOptions
+});
+
+const App = () => {
+  const [userData, setUserData] = useState(null);
+
   return (
-    <>
-      <Navbar />
-      <div className="layout">
-        <DeclareWinner />
-      </div>
-    </>
+    <ApolloProvider client={client}>
+      <UserDataContext.Provider value={{ userData, setUserData }}>
+        <Router>
+          {userData !== null && <Navbar />}
+          <div className={userData !== null ? "layout" : ""}>
+            <Navigation />
+          </div>
+          <ToastContainer />
+        </Router>
+      </UserDataContext.Provider>
+    </ApolloProvider>
   );
 }
 

@@ -16,3 +16,18 @@
 .robot{
   transform: scale(0.5);
 }
+
+.confetti1, .confetti2 {
+  position: absolute;
+  z-index: 0;
+}
+
+.drawGift{
+  width: 100%;
+}
+
+.hdivider{
+  height: 1px;
+  background-color: $light-bg;
+  margin: 10px 0;
+}
