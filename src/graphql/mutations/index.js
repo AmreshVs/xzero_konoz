@@ -12,3 +12,9 @@ export const LOGIN = gql`
     }
   }
 `;
+
+export const DECLARE_KONOZ_WINNERS = gql`
+  mutation DeclareKonozWinners($id: Int!){
+    DeclareKonozWinners(id: $id)
+  }
+`;

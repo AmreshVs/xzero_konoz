@@ -22,12 +22,50 @@
   z-index: 0;
 }
 
+#lottie{
+  width: 100% !important;
+}
+
 .drawGift{
+  position: relative;
   width: 100%;
+  height: 500px;
 }
 
 .hdivider{
   height: 1px;
   background-color: $light-bg;
   margin: 10px 0;
+}
+
+.carousel .slide {
+  background: #FFF !important;
+}
+
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid #000 !important;
+}
+
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid #000 !important;
+}
+
+.carousel .control-dots .dot {
+  background: $primary !important;
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+  background: none !important;
+}
+
+.carousel .thumb.selected, .carousel .thumb:hover {
+  border: 2px solid #33333330 !important;
+}
+
+.carousel .control-dots {
+  bottom: -14px !important;
+}
+
+.carousel .carousel-status {
+  display: none !important;
 }

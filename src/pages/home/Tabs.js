@@ -6,7 +6,7 @@ import MyKonoz from './MyKonoz';
 const Tabs = () => {
   return (
     <div className="side-tab shadow-nw">
-      <div className="nav nav-pills me-3 tab-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <div className="nav nav-pills tab-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <a className="nav-link active" id="my-konoz" data-bs-toggle="pill" href="#my-konoz-tab" role="tab" aria-selected="true">My Konoz</a>
         <a className="nav-link" id="konoz-winners" data-bs-toggle="pill" href="#konoz-winners-tab" role="tab" aria-selected="false">Konoz Winners</a>
       </div>

@@ -8,16 +8,13 @@ import WinnersList from './WinnersList';
 const DeclareWinner = () => {
   const [start, setStart] = useState(false);
   const [winners, setWinners] = useState(false);
+  const [winnersList, setWinnersList] = useState([]);
   const location = useLocation();
 
   let data = location?.state?.data;
 
   const handleStart = () => {
     setStart(!start);
-
-    setTimeout(() => {
-      setWinners(!winners);
-    }, 2000);
   }
 
   return (
@@ -26,9 +23,9 @@ const DeclareWinner = () => {
         <KonozInfo data={data} start={start} handleStart={handleStart} />
         :
         !winners ?
-          <SelectingWinners />
+          <SelectingWinners data={data} setWinners={setWinners} setWinnersList={setWinnersList} />
           :
-          <WinnersList />
+          <WinnersList title={data?.win_title_en} data={winnersList} />
       }
     </>
   )

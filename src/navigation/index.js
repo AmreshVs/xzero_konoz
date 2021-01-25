@@ -5,6 +5,7 @@ import { Switch, Route, useHistory } from "react-router-dom";
 import Login from "pages/login";
 import Home from "pages/home";
 import DeclareWinner from "pages/declareWinner";
+import VoucherWinnersList from "pages/winnersList";
 import { getUserData } from "constants/commonFunctions";
 import { UserDataContext } from "context";
 
@@ -36,6 +37,9 @@ const Navigation = () => {
       </Route>
       <Route path="/declare-winner/:id">
         <DeclareWinner />
+      </Route>
+      <Route path="/konoz-winners/:id">
+        <VoucherWinnersList />
       </Route>
     </Switch>
   );

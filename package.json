@@ -16,6 +16,8 @@
     "react-dom": "^16.13.1",
     "react-image-magnify": "^2.7.4",
     "react-infinite-data": "^1.0.3",
+    "react-preload-image": "^1.0.7",
+    "react-responsive-carousel": "^3.2.11",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-toastify": "^6.2.0"

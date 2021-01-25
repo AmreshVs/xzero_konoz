@@ -3,10 +3,10 @@ import { thumbnailUrl } from 'constants/commonFunctions';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Konoz = ({ data }) => {
+const Konoz = ({ data, winners = false }) => {
   return (
     <Link className="text-decoration-none" to={{
-      pathname: `/declare-winner/${data?.id}`,
+      pathname: !winners ? `/declare-winner/${data?.id}` : `/konoz-winners/${data?.id}`,
       state: { data }
     }}
     >
@@ -36,7 +36,7 @@ const Konoz = ({ data }) => {
               </p>
               </div>
               <div className="col-md-2 text-center">
-                <span className="badge rounded-pill bg-success px-4 py-2">Ready to declare</span>
+                <span className="badge rounded-pill bg-success px-4 py-2">{!winners ? 'Ready to declare' : 'Declared'}</span>
               </div>
             </div>
           </div>

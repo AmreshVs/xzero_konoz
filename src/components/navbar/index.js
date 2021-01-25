@@ -1,10 +1,19 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { firstLetterUpper } from 'constants/commonFunctions';
-import { UserDataContext } from 'context';
 import React, { useContext } from 'react';
+import { useHistory } from 'react-router-dom';
+
+import { UserDataContext } from 'context';
+import { firstLetterUpper } from 'constants/commonFunctions';
 
 const Navbar = () => {
-  const { userData } = useContext(UserDataContext);
+  const history = useHistory();
+  const { userData, setUserData } = useContext(UserDataContext);
+
+  const handleSignout = () => {
+    history.replace('/login');
+    setUserData(null);
+    localStorage.removeItem('xzero_user');
+  }
 
   return (
     <>
@@ -24,8 +33,7 @@ const Navbar = () => {
                   {firstLetterUpper(userData?.fullname)}
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a className="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
-                  <a className="dropdown-item" href="#" data-toggle="modal" data-target="#signupModal">Signup</a>
+                  <a className="dropdown-item" href="#" data-toggle="modal" onClick={() => handleSignout()}>Signout</a>
                 </div>
               </li>
             </ul>
