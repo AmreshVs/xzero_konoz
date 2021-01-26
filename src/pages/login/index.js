@@ -27,17 +27,20 @@ const Login = () => {
       }
     });
     setLoading(false);
-
+    console.log(errors);
     if (errors && errors[0]?.extensions?.exception?.code === 400) {
       toast.dark(errors[0]?.extensions?.exception?.data?.data[0].messages[0].message);
       return;
     }
 
-    if (data?.publisherLogin?.jwt !== '') {
+    if (data && data?.publisherLogin?.jwt !== '') {
       let userData = { jwt: data?.publisherLogin?.jwt, ...data?.publisherLogin?.user };
       setUserData(userData);
       localStorage.setItem('xzero_user', JSON.stringify(userData));
       history.push('/');
+    }
+    else {
+      toast.dark('Error Occured, Please try later!');
     }
   }
 
